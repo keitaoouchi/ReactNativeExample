@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HorizontalAlbumCoverCollection renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 8,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 16,
+        "margin": 8,
+      }
+    }
+  >
+    test
+  </Text>
+  <RCTScrollView
+    alwaysBounceVertical={false}
+    automaticallyAdjustContentInsets={false}
+    bounces={true}
+    directionalLockEnabled={true}
+    horizontal={true}
+    showsVerticalScrollIndicator={false}
+    style={
+      Object {
+        "height": 140,
+      }
+    }
+  >
+    <View />
+  </RCTScrollView>
+</View>
+`;

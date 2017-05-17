@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#EFEFF2",
+      "flex": 1,
+      "height": 64,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "flex": 1,
+        "flexDirection": "row",
+        "top": 20,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={false}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "lightgray",
+            "fontSize": 20,
+          },
+          Object {
+            "flex": 1,
+            "marginBottom": 8,
+            "marginLeft": 8,
+            "marginTop": 8,
+          },
+          Object {
+            "fontFamily": "FontAwesome",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+        ]
+      }
+    >
+      
+    </Text>
+    <TextInput
+      onChangeText={undefined}
+      onSubmitEditing={undefined}
+      style={
+        Object {
+          "backgroundColor": "#e6e6e7",
+          "borderColor": "#EFEFF2",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "flex": 12,
+          "height": 40,
+          "marginRight": 12,
+          "paddingLeft": 12,
+        }
+      }
+      value={undefined}
+    />
+  </View>
+</View>
+`;

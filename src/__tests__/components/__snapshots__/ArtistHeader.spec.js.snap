@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArtistHeader renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "alignSelf": "center",
+      "height": 300,
+      "justifyContent": "flex-end",
+      "width": 320,
+    }
+  }
+>
+  <Image
+    onLoadEnd={[Function]}
+    source={
+      Object {
+        "uri": "https://example.com/1",
+      }
+    }
+    style={
+      Object {
+        "borderRadius": 80,
+        "height": 160,
+        "opacity": 0,
+        "width": 160,
+      }
+    }
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 20,
+        "margin": 16,
+      }
+    }
+  >
+    Name-1
+  </Text>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#1ed760",
+            "borderRadius": 22,
+            "height": 44,
+            "margin": 12,
+            "padding": 8,
+            "width": 200,
+          },
+          false,
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "margin": 4,
+            "textAlign": "center",
+          }
+        }
+      >
+        Spotifyで聴く
+      </Text>
+    </View>
+  </View>
+</View>
+`;
