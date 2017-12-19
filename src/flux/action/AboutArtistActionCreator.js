@@ -1,6 +1,6 @@
 import AboutArtistActionTypes from "./AboutArtistActionTypes";
-import Album from "./../../repository/Album";
-import Artist from "./../../repository/Artist";
+import Album from "../../model/Album";
+import Artist from "../../model/Artist";
 
 export default class AboutArtistActionCreator {
   constructor(dispatcher) {

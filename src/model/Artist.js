@@ -1,3 +1,5 @@
+import Authentication from "./Authentication";
+
 export default class Artist {
 
   constructor({id, name, url, spotifyURL, imageURL}) {
@@ -9,7 +11,7 @@ export default class Artist {
   }
 
   static fetch(url) {
-    return fetch(
+    return Authentication.request(
       url,
     ).then(
       res => res.json(),
@@ -19,7 +21,7 @@ export default class Artist {
   }
 
   fetchRelatedArtists() {
-    return fetch(
+    return Authentication.request(
       `${this.url}/related-artists`,
     ).then(
       res => res.json(),

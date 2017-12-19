@@ -1,5 +1,5 @@
 import {Factory} from "rosie";
-import AlbumDetail from "../../../src/repository/AlbumDetail";
+import AlbumDetail from "../../model/AlbumDetail";
 import moment from "moment";
 
 export default AlbumFactory =

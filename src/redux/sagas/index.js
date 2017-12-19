@@ -1,6 +1,7 @@
 import {call, put, takeLatest} from "redux-saga/effects";
-import Album from "../../repository/Album";
-import {STATUS} from "../../components/AlbumSearch";
+import Album from "../../model/Album";
+import {STATUS} from "../../components/AlbumSearchContents";
+import Authentication from "../../model/Authentication";
 
 function* searchAlbum(action) {
   try {
@@ -25,8 +26,27 @@ function* searchAlbum(action) {
   }
 }
 
-function* saga() {
+function* loadAuthentication() {
+  try {
+    const auth = yield call(Authentication.load)
+    if(auth.isValid()) {
+      yield put({type: "AUTHENTICATED"})
+    } else {
+      // FIXME: ????
+      yield call(Authentication.invalidate)
+      yield put({type: "NOT_AUTHENTICATED"})
+    }
+  } catch (e) {
+    yield put({type: "NOT_AUTHENTICATED"})
+  }
+}
+
+function* searchAlbumAsync() {
   yield takeLatest('ALBUM_SEARCH_REQUEST', searchAlbum,);
 }
 
-export default saga;
+function* loadAuthenticationAsync() {
+  yield takeLatest('LOAD_AUTHENTICATION', loadAuthentication,);
+}
+
+export {searchAlbumAsync, loadAuthenticationAsync};

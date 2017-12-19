@@ -1,5 +1,5 @@
 import {combineReducers} from "redux";
-import {STATUS} from "../../components/AlbumSearch";
+import {STATUS} from "../../components/AlbumSearchContents";
 
 const inputValue = (state = '水曜日のカンパネラ', action) => {
   if (action.type === 'UPDATE_INPUT') {
@@ -22,8 +22,18 @@ const searchStatus = (state = STATUS.INIT, action) => {
   return state;
 };
 
+const isAuthenticated = (state = false, action) => {
+  if (action.type === "AUTHENTICATED") {
+    return true;
+  } else if (action.type === "NOT_AUTHENTICATED") {
+    return false;
+  }
+  return state;
+}
+
 export default reducer = combineReducers({
   inputValue,
   albums,
   searchStatus,
+  isAuthenticated
 });

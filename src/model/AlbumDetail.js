@@ -1,4 +1,5 @@
 import Track from "./Track";
+import Authentication from "./Authentication";
 
 export default class AlbumDetail {
 
@@ -10,7 +11,7 @@ export default class AlbumDetail {
   }
 
   static fetch(album) {
-    return fetch(
+    return Authentication.request(
       album.url,
     ).then(
       res => res.json(),

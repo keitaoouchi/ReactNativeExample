@@ -5,12 +5,12 @@ import AlbumCover from "./AlbumCoverCell";
 import Workaround from "../misc/Workaround";
 
 export default AlbumCollection = (props) => (
-  <View style={{...Workaround.style.root}}>
+  <View>
     <FlatList
       renderItem={({item}) => (
         <TouchableOpacity
           onPress={
-            () => Actions.album({title: item.title, album: item})
+            () => Actions.album({title: item.title, album: item, hideNavBar: false})
           }
         >
           <AlbumCover album={item}/>

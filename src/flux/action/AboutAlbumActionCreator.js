@@ -1,5 +1,5 @@
 import AboutAlbumActionTypes from "./AboutAlbumActionTypes";
-import AlbumDetail from "./../../repository/AlbumDetail";
+import AlbumDetail from "../../model/AlbumDetail";
 
 export default class AboutAlbumActionCreator {
 

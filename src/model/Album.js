@@ -1,4 +1,5 @@
 import Artist from "./Artist";
+import Authentication from "./Authentication";
 
 export default class Album {
 
@@ -35,9 +36,8 @@ export default class Album {
   }
 
   static search(keyword) {
-    return fetch(
-      `https://api.spotify.com/v1/search?q=${encodeURI(
-        keyword)}&type=album&market=JP`,
+    return Authentication.request(
+      `https://api.spotify.com/v1/search?q=${encodeURI(keyword)}&type=album&market=JP`
     ).then(
       res => res.json(),
     ).then(
@@ -48,7 +48,7 @@ export default class Album {
   }
 
   static fetch(artist) {
-    return fetch(
+    return Authentication.request(
       `${artist.url}/albums?album_type=album,single&market=JP`,
     ).then(
       res => res.json(),

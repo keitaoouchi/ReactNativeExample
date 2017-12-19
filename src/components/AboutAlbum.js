@@ -28,6 +28,7 @@ const AboutAlbumPresentation = ({tracks, album, albumDetail, artist, playingTrac
               title: artist.name,
               album: album,
               artist: artist,
+              hideNavBar: false
             });
           }}
         />

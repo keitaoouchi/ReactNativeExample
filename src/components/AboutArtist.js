@@ -29,17 +29,17 @@ const AboutArtistPresentation = ({artist, albums, singles, relatedArtists}) => (
     <HorizontalAlbumCoverCollection
       title="アルバム"
       albums={albums}
-      onPress={(album) => Actions.album({title: album.title, album})}
+      onPress={(album) => Actions.album({title: album.title, album, hideNavBar: false})}
     />
     <HorizontalAlbumCoverCollection
       title="シングル"
       albums={singles}
-      onPress={(album) => Actions.album({title: album.title, album})}
+      onPress={(album) => Actions.album({title: album.title, album, hideNavBar: false})}
     />
     <RelatedArtistCollection
       title="関連アーティスト"
       artists={relatedArtists}
-      onPress={(artist) => Actions.artist({title: artist.name, artist})}
+      onPress={(artist) => Actions.artist({title: artist.name, artist, hideNavBar: false})}
     />
   </ScrollView>
 );

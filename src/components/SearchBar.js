@@ -22,20 +22,16 @@ const style = {
   root: {
     backgroundColor: Color.ivory,
     height: Workaround.style.root.marginTop,
-    top: 0,
-    left: 0,
-    right: 0,
-    position: 'absolute',
-    flex: 1,
+    flex: 0,
   },
   search: {
     flex: 1,
     ...Platform.select({
       ios: {
-        top: 20,
+        marginTop: 20,
       },
       android: {
-        top: 8,
+        marginTop: 8,
       },
     }),
     flexDirection: 'row',
